@@ -1,0 +1,83 @@
+<?php
+
+//include_once "connect_db.php";
+//include_once "cud.inc";
+//global $link;
+
+class Users
+{
+    // Properties
+    protected string $username;
+    protected string $surname;
+    protected ?int $age = NULL;
+
+    // Constructor
+    public function __construct($username, $surname){
+        echo 'One object of class "' . __CLASS__ . '" was initiated!<br>';
+
+//        $query = "INSERT into `users` (Name, Surname)
+//                     VALUES ('$username', '$surname')";
+//
+//        connect_to_database();
+//
+//        add_user($query);
+//
+//        $res = mysqli_query($link, $query) or die(mysqli_error());
+
+
+
+
+    }
+
+
+    /**
+     * @return int|null
+     */
+    public function getAge(): ?int
+    {
+        return $this->age;
+    }
+
+    /**
+     * @param int|null $age
+     * @return int|null
+     */
+    public function setAge(?int $age): ?int
+    {
+        return $this->age = $age;
+    }
+
+    /**
+     * @param $name
+     */
+    public function setName($name)
+    {
+        $this->username = $name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUsername(): string
+    {
+        return $this->username;
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getSurname(): string
+    {
+        return $this->surname;
+    }
+
+    /**
+     * @param mixed $surname
+     */
+    public function setSurname(mixed $surname)
+    {
+        $this->surname = $surname;
+    }
+
+}
